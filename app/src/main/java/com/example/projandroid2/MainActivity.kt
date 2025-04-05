@@ -179,7 +179,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
         // Retrofit
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:3000/")
+            .baseUrl("http://172.22.77.216:3000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

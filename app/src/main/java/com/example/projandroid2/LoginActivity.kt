@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
             btnLogin.isEnabled = false
 
             try {
-                if (email == "admin@exemplo.com" && senha == "123456") {
+                if (email == "admin" && senha == "admin") {
                     // Login bem-sucedido
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
@@ -77,25 +77,25 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun validarCampos(email: String, senha: String): Boolean {
-        if (email.isEmpty()) {
-            etEmail.error = "Email é obrigatório"
-            return false
-        }
+//        if (email.isEmpty()) {
+//            etEmail.error = "Email é obrigatório"
+//            return false
+//        }
+//
+//        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+//            etEmail.error = "Email inválido"
+//            return false
+//        }
 
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            etEmail.error = "Email inválido"
-            return false
-        }
-
-        if (senha.isEmpty()) {
-            etSenha.error = "Senha é obrigatória"
-            return false
-        }
-
-        if (senha.length < 6) {
-            etSenha.error = "Senha deve ter pelo menos 6 caracteres"
-            return false
-        }
+//        if (senha.isEmpty()) {
+//            etSenha.error = "Senha é obrigatória"
+//            return false
+//        }
+//
+//        if (senha.length < 6) {
+//            etSenha.error = "Senha deve ter pelo menos 6 caracteres"
+//            return false
+//        }
 
         return true
     }
